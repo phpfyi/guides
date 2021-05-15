@@ -1,24 +1,3 @@
-# vue-3-ssr
+# Server-side rendering (SSR) with Vue 3 (TypeScript), Node (TypeScript), Vue Router, and Store
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Click here for [the complete guide](https://php.fyi/articles/vue-3-ssr)
