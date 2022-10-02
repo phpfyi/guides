@@ -64,14 +64,14 @@ class App1
 // Checks the constructor params
 $container->bind(ConfigInterface::class, PHPConfig::class);
 
-$instance = $container->resolve(App1::class);
-if (get_class($instance->config) !== PHPConfig::class) {
+$app1 = $container->resolve(App1::class);
+if (get_class($app1->config) !== PHPConfig::class) {
     throw new Exception();
 }
 
 // Checks the method params
-$container->resolveMethod($instance, 'handle');
-if (get_class($instance->methodConfig) !== PHPConfig::class) {
+$container->resolveMethod($app1, 'handle');
+if (get_class($app1->methodConfig) !== PHPConfig::class) {
     throw new Exception();
 }
 
@@ -80,16 +80,19 @@ class App2
 {
     public function __construct(
         public ConfigInterface $config,
-        public string $value1,
-        public string $value2,
+        public string $arg1,
+        public string $arg2,
     ) {
     }
 }
 
-$instance = $container->resolve(App2::class, ['value1' => 'value1', 'value2' => 'value2']);
-if ($instance->value1 !== 'value1') {
+$app2 = $container->resolve(App2::class, [
+    'arg1' => 'value1',
+    'arg2' => 'value2'
+]);
+if ($app2->arg1 !== 'value1') {
     throw new Exception();
 }
-if ($instance->value2 !== 'value2') {
+if ($app2->arg2 !== 'value2') {
     throw new Exception();
 }

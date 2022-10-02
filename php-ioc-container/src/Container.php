@@ -18,13 +18,13 @@ class Container implements ContainerInterface
         return $instance;
     }
 
-    public function bind(string $id, string $namespace): Container
+    public function bind(string $id, string $namespace): ContainerInterface
     {
         $this->bindings[$id] = $namespace;
         return $this;
     }
 
-    public function singleton(string $id, object $instance): Container
+    public function singleton(string $id, object $instance): ContainerInterface
     {
         $this->bindings[$id] = $instance;
         return $this;

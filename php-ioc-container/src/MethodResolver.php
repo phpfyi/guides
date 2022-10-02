@@ -17,7 +17,7 @@ class MethodResolver
 
     public function getValue()
     {
-        // inspect the class method
+        // get the class method reflection class
         $method = new ReflectionMethod(
             $this->instance,
             $this->method
@@ -28,7 +28,7 @@ class MethodResolver
             $method->getParameters(),
             $this->args
         );
-        // call the method with the resolved arguments
+        // call the method with the injected arguments
         return $method->invokeArgs(
             $this->instance,
             $argumentResolver->getArguments()
