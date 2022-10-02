@@ -1,0 +1,12 @@
+{
+    "require": {
+        "psr/container": "1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpFyi\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
