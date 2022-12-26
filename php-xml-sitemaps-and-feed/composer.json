@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "PhpFyi\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
